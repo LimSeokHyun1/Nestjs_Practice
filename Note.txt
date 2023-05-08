@@ -1,0 +1,85 @@
+<폴더 구성>
+
+eslintrc.js : 
+개발자들이 특정 규칙을 가지고 코드를 깔끔히 짤 수 있게 도와주는 library -> typescript 가이드라인 제시, 문법 오류 알림
+
+prittierrc :
+코드 형식 맞추기 위한 코드 포맷터 -> 따옴표, Indent
+
+nest-cli.json:
+nest 프로젝트 위한 설정 Json file -> sourceRoot = "src"에 대부분의 프로젝트 로직 존재
+
+package.json:
+프로젝트 이름, 버전, dependencies 등의 정보 명시
+    build: 운영환경 위한 빌드
+    format: 린트 에러 났을 시 수정
+    start: 앱 시작
+
+tsconfig.json: 
+타입스크립트 컴파일 설정
+
+tsconfig.build.json:
+tsconfig.json의 연장선 상 파일이며, build를 할 때에 필요한 설정들 명시
+"excludes"에서 빌드 시 필요없는 파일들 명시
+
+src 폴더:
+대부분의 비즈니스 로직 위치
+    main.ts: 앱을 생성, 실행
+    app.module.ts: 앱 모듈 정의
+
+***************************************************************************************************************************************************
+
+<실행 순서>
+
+app.module.ts에 Module로 AppController와 Appservice가 등록되어 있는 상태 (진입점)
+    main.ts에서 이 AppModule로 app을 생성
+    client에서 localhost:3000으로 Get http method로 request 보냄
+app.controller의 '/' endpoint로 도착 - appService 의 getHello() 함수 return (router)
+app.service의 메소드에서 "Hello World!" return 
+    response로 browser에 (controller)   
+
+***************************************************************************************************************************************************
+
+<NestJs module>
+
+@Module() 데코레이터로 주석이 달린 클래스 -> 애플리케이션 구조 구성하는 데 사용하는 meta data를 제공
+
+각 Application에는 하나 이상의 모듈(Root module, App module) 존재 == 시작점
+
+User Module, Order Module, Chat Module 등으로 밀접하게 관련된 기능 집합으로 구성
+
+기본적으로 singleton -> 여러 모듈 간 동일한 인스턴스 공유 가능
+
+생성: nest g module boards
+
+***************************************************************************************************************************************************
+
+<Controller>
+
+들어오는 요청 처리, 클라이언트에 응답 반환
+
+@Controller() 데코레이터로 클래스를 데코레이션하여 정의 -> BoardController, UserController 등을 정의
+@Get, @Post() 데코레이터로 메서드를 데코레이션하여 Handler를 정의
+
+생성: nest g controller boards --no-spec (※ test 코드 생성 x)
+(boards 폴더 찾고, 안에 controller 파일 생성하고, module파일 찾아서 controller import)
+
+***************************************************************************************************************************************************
+
+<Service>
+
+데이터 유효성 체크, DB 관련 로직 등 처리
+
+@Injectable() 데코레이터로 Application 전체 다른 컴포넌트에서 이 서비스를 사용할 수 있게 만듦
+    -> Board Service 에서 Board contriller로 종속성 주입을 할 때에는 Controller Class 안의 Constructor로 (member 변수)
+    ("constructor(private boardsService: BoardsService){}" -> private와 같은 접근제한자 사용 시 암묵적으로 class property)
+
+생성: nest g service boards --no-spec
+
+***************************************************************************************************************************************************
+
+<Provider>: service, repository, factory, helper ...
+
+DI 가능
+
+Nest에 등록해야 사용 가능 - Module 파일의 providers 항목 내에 추가하는 방식
