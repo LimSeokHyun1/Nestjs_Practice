@@ -1,0 +1,75 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model board {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  status      String
+}
+
+model chatlog {
+  id        Int      @id @default(autoincrement())
+  solvedid  Int
+  createdAt DateTime @default(now())
+  content   String
+  solved    solved   @relation(fields: [solvedid], references: [id], map: "Chatlog_solvedid_fkey")
+
+  @@index([solvedid], map: "Chatlog_solvedid_fkey")
+}
+
+model problem {
+  id                Int                 @id @default(autoincrement())
+  title             String
+  content           String?
+  answer            String
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  hidden            Boolean             @default(false)
+  solved            solved[]
+  suggestedquestion suggestedquestion[]
+}
+
+model solved {
+  id        Int       @id @default(autoincrement())
+  userid    String
+  problemid Int
+  status    Int       @default(0)
+  chatlog   chatlog[]
+  problem   problem   @relation(fields: [problemid], references: [id], map: "Solved_problemid_fkey")
+  user      user      @relation(fields: [userid], references: [userid], map: "Solved_userid_fkey")
+
+  @@index([problemid], map: "Solved_problemid_fkey")
+  @@index([userid], map: "Solved_userid_fkey")
+}
+
+model suggestedquestion {
+  id        Int     @id @default(autoincrement())
+  problemid Int
+  content   String
+  answer    String?
+  problem   problem @relation(fields: [problemid], references: [id], map: "SuggestedQuestion_problemid_fkey")
+
+  @@index([problemid], map: "SuggestedQuestion_problemid_fkey")
+}
+
+model user {
+  id        Int      @id @default(autoincrement())
+  userid    String   @unique(map: "User_userid_key")
+  password  String
+  nickname  String   @unique(map: "User_nickname_key")
+  email     String   @unique(map: "User_email_key")
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  isAdmin   Boolean  @default(false)
+  isBanned  Boolean  @default(false)
+  credit    Int      @default(0)
+  solved    solved[]
+}
