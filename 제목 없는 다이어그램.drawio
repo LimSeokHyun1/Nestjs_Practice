@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-12T03:47:49.114Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="B8DojBpL8PEEiUxApYrm" version="22.1.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-12T06:18:02.162Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="zARubkDnzegk2KgxmeYc" version="22.1.0" type="github">
   <diagram name="페이지-1" id="MeaeADXvO4iu8NjLNxZM">
     <mxGraphModel dx="712" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -82,16 +82,19 @@
           <mxGeometry x="470" y="200" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="UcPWk9Etb_t2FvM8a2OJ-32" value="InitializeImageLoader()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="520" y="310" width="60" height="30" as="geometry" />
+          <mxGeometry x="520" y="300" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="UcPWk9Etb_t2FvM8a2OJ-33" value="InitializeRenderer()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="510" y="330" width="60" height="30" as="geometry" />
+          <mxGeometry x="510" y="320" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="UcPWk9Etb_t2FvM8a2OJ-36" value="AddShaderSourceDirectoryMapping()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="557.5" y="350" width="60" height="30" as="geometry" />
+          <mxGeometry x="557.5" y="360" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="UcPWk9Etb_t2FvM8a2OJ-37" value="Shader File" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="450" y="770" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KRM7xZCOred_Fz5fk9Ao-1" value="InitializeImageAligner()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="340" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
