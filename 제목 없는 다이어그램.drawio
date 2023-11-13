@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-13T05:19:29.739Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="cpgZiY9F0zfOObkgllHF" version="22.1.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-13T06:54:18.015Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="tcDWsAApzrb5pArAolDT" version="22.1.0" type="github">
   <diagram name="페이지-1" id="MeaeADXvO4iu8NjLNxZM">
     <mxGraphModel dx="2074" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -76,7 +76,7 @@
           <mxGeometry x="370" y="517.5" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="KRM7xZCOred_Fz5fk9Ao-1" value="InitializeImageAligner()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="975" y="530" width="60" height="30" as="geometry" />
+          <mxGeometry x="940" y="530" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="KRM7xZCOred_Fz5fk9Ao-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KRM7xZCOred_Fz5fk9Ao-5" target="UcPWk9Etb_t2FvM8a2OJ-30" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -103,7 +103,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="KRM7xZCOred_Fz5fk9Ao-10" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;imageAligner&lt;/font&gt;&lt;br&gt;&lt;/b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;br&gt;(with OPENCV)&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="920" y="650" width="170" height="70" as="geometry" />
+          <mxGeometry x="920" y="720" width="170" height="70" as="geometry" />
         </mxCell>
         <mxCell id="KRM7xZCOred_Fz5fk9Ao-13" value="InitializeImageLoader()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="450" y="400" width="60" height="30" as="geometry" />
@@ -174,6 +174,36 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="740" y="720" as="sourcePoint" />
             <mxPoint x="862" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtyN0XMMpVYdFFSAMTQd-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" target="PtyN0XMMpVYdFFSAMTQd-21" source="PtyN0XMMpVYdFFSAMTQd-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1109.5" y="490" as="sourcePoint" />
+            <mxPoint x="1110" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtyN0XMMpVYdFFSAMTQd-21" value="&lt;b&gt;defaultRenderer&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1026.25" y="860" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PtyN0XMMpVYdFFSAMTQd-22" value="InitializeRenderer()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="672" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PtyN0XMMpVYdFFSAMTQd-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KRM7xZCOred_Fz5fk9Ao-10" target="PtyN0XMMpVYdFFSAMTQd-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="872" y="832" as="sourcePoint" />
+            <mxPoint x="1020" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtyN0XMMpVYdFFSAMTQd-27" value="&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Fixed.usf&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;(Shader File)&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1046.25" y="1028" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PtyN0XMMpVYdFFSAMTQd-28" value="DrawGlobalDefaultShaderRenderTarget()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="997.75" y="960" width="236" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PtyN0XMMpVYdFFSAMTQd-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PtyN0XMMpVYdFFSAMTQd-21" target="PtyN0XMMpVYdFFSAMTQd-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="850" y="930" as="sourcePoint" />
+            <mxPoint x="850" y="1030" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
